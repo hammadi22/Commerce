@@ -17,13 +17,15 @@ connectDB()
 
 const app = express()
 
+
+
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 
 app.use(express.json())
 
-app.use('/api/products', productRoutes)
+app.use('/api/products', productRoutes) 
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
 app.use('/api/upload', uploadRoutes)
@@ -45,7 +47,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get('/', (req, res) => {
     res.send('API is running....')
   })
-}
+} 
 
 app.use(notFound)
 app.use(errorHandler)

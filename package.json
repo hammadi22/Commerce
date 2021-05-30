@@ -4,6 +4,10 @@
   "description": "MERN App",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": ">=14.17.0",
+    "npm": ">=7.11.1"
+  },
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -35,4 +39,5 @@
     "concurrently": "^6.1.0",
     "nodemon": "^2.0.7"
   }
+  
 }

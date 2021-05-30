@@ -59,7 +59,7 @@ const ProductScreen = ({ history, match }) => {
   }
 
   return (
-    <>
+    <div>
       <Link className='btn btn-light my-3' to='/'>
         Go Back
       </Link>
@@ -68,7 +68,7 @@ const ProductScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <>
+        <div>
           <Meta title={product.name} />
           <Row>
             <Col md={6}>
@@ -217,9 +217,9 @@ const ProductScreen = ({ history, match }) => {
               </ListGroup>
             </Col>
           </Row>
-        </>
+        </div>
       )}
-    </>
+    </div>
   )
 }
 
